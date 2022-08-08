@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Survey form</title>
+    <title>Badminton Survey form</title>
+    <link rel="stylesheet"  href="styles.css">
 </head>
 <body>
-    <h1>Survay form</h1>
+    <h1 id="title">Badminton Survey form</h1>
+    <p class="body" id="description">Hey fellow shuttler, Please help us by filling this survey form.</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" >Name: <input type="text" id="name" placeholder="your name" required /></label>
+            <label id="email-label" >email: <input type="email" id="email" placeholder="your email" required /></label>
+            <label id="number-label" >age: <input type="number" id="number" min="4" max="110" placeholder="your age" required /></label>
+        </fieldset>
+
+        <fieldset>
+            <label>How often do you play? </label>
+            <select id="dropdown">
+                <option value="">Select One</option>
+                <option value="1">Once a week</option>
+                <option value="2">twice a week</option>
+                <option value="3">more than twice a week</option>
+            </select>
+            <p> Gameplay level: </p>
+            <label><input type="radio" name="playLevel" class="inline" value="pro"> I'm a pro player</label>
+            <label><input type="radio" name="playLevel" class="inline" value="int"> I play for college team</label>
+            <label><input type="radio" name="playLevel" class="inline" value="recr"> I'm a recreational player</label>
+            
+            <p>I can fluently play:</p>
+            <label><input type="checkbox" class="inline" value="clear">Clear shot</label>
+            <label><input type="checkbox" class="inline" value="drop">Drop shot</label>
+            <label><input type="checkbox" class="inline" value="smash">Smash</label>
+        </fieldset>
+        
+        <fieldset>
+            <label><textarea rows="3" cols="30" placeholder="tell us more about in which area would you like to improve your game.."></textarea>  </label>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit">
+</form>
 </body>
+
 </html>
